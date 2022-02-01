@@ -1,0 +1,108 @@
+Problem Statement
+What's the weather in [city] for today?
+What's the weather in [city] for tomorrow?
+What's the weather in [city] for [day]?
+
+1)Weather in City for today?
+From the musement api we need to send http request on below link with a 
+query parameter key and city name.
+Here q represents city name 
+the response contain three main array location,current and forecast.
+We are only interested into forecast array because in its subarray forecastday we can get all the details related to
+today weather forecast.
+
+link:	http://api.weatherapi.com/v1/forecast.json?key=b296af8ec99949ae86373440222801&q=London
+Response:    
+"forecast": {
+        "forecastday": [
+	 	{
+		"date": "2022-01-30",
+                "date_epoch": 1643500800,
+		"day": {			
+			"condition": {
+                        "text": "Sunny",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                        "code": 1000
+                    	},
+		}
+	     }
+	]
+     }
+and then we can save this response into our
+
+2)What's the weather in [city] for tomorrow?
+From the musement api we need to send http request on below link with a 
+query parameter key,days and q.
+Here q represents city name 
+the response contain three main array location,current and forecast.
+We are only interested into forecast array because in its subarray forecastday we can get all the details related to
+today and tommorrow weather forecast.
+
+link:	http://api.weatherapi.com/v1/forecast.json?key=b296af8ec99949ae86373440222801&q=London&days=2
+Response:    
+"forecast": {
+        "forecastday": [
+	 	{
+		"date": "2022-01-30",
+                "date_epoch": 1643500800,
+		"day": {			
+			"condition": {
+                        "text": "Sunny",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                        "code": 1000
+                    	},
+		}
+	     }
+	     {
+		"date": "2022-01-31",
+                "date_epoch": 1643500800,
+		"day": {			
+			"condition": {
+                        "text": "Sunny",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                        "code": 1000
+                    	},
+		}
+	     }
+	]
+     } 
+3)What's the weather in [city] for [day]?
+From the musement api we need to send http request on below link with a 
+query parameter key,days and q.
+Here q represents city name 
+the response contain three main array location,current and forecast.
+We are only interested into forecast array because in its subarray forecastday we can get all the details related to
+today and tommorrow weather forecast.
+
+link:	http://api.weatherapi.com/v1/forecast.json?key=b296af8ec99949ae86373440222801&q=London&days=10
+Response:    
+"forecast": {
+        "forecastday": [
+	 	{
+		"date": "2022-01-30",
+                "date_epoch": 1643500800,
+		"day": {			
+			"condition": {
+                        "text": "Sunny",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                        "code": 1000
+                    	},
+		}
+	     }
+		....
+		....
+		....similar response key like above only values are changed
+
+	     {
+		"date": "2022-02-10",
+                "date_epoch": 1643500800,
+		"day": {			
+			"condition": {
+                        "text": "Sunny",
+                        "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                        "code": 1000
+                    	},
+		}
+	     }
+	]
+     } 
