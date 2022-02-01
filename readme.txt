@@ -1,3 +1,6 @@
+Full Name:  Muhammad Waseem Alam Jagaad
+FirstName: Muhammad Waseem 
+Last Name: Alam
 Important Note:Sometimes docker build failed due to slow or inconsistent internet issue.In that case run the docker compose command again
 Project Setup Using Docker and PHP8:
 Step 1:
