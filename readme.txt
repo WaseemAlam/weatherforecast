@@ -1,3 +1,4 @@
+Important Note:Sometimes docker build failed due to slow or inconsistent internet issue.In that case run the docker compose command again
 Project Setup Using Docker and PHP8:
 Step 1:
 For windows users
@@ -24,7 +25,7 @@ docker ps
 The above command will gave you list of all container with your container id then execute below command
 
 docker exec -it container_id bash
-Now the below command is used to run the unittesting.
+Now the below command is used to run the Unit Testing.
 
 ./vendor/bin/phpunit --testdox
 if unit testing will fail.then first go to browser and copy the country city weather from browser and add 
